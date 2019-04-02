@@ -1,4 +1,7 @@
 pipeline {
+  agent {
+      label 'MaxSoft WebBot Test Suite'
+  }
     environment {
         CI = 'true'
     }
