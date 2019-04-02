@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                mvn test-compile gauge:execute -DspecsDir="specs/login.spec" -Denv="dev"
+                mvn test-compile gauge:execute -DspecsDir=specs
             }
         }
         stage('Build') {
