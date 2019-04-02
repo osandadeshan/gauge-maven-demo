@@ -5,12 +5,12 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                mvn test-compile gauge:execute -DspecsDir=specs
+                'mvn test-compile gauge:execute -DspecsDir=specs'
             }
         }
         stage('Build') {
             steps {
-                mvn clean install -DskipTests
+                'mvn clean install -DskipTests'
             }
         }
     }
