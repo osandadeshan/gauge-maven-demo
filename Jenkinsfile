@@ -8,12 +8,12 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                'mvn test-compile gauge:execute -DspecsDir=specs'
+                bat 'mvn test-compile gauge:execute -DspecsDir=specs'
             }
         }
         stage('Build') {
             steps {
-                'mvn clean install -DskipTests'
+                bat 'mvn clean install -DskipTests'
             }
         }
     }
